@@ -1,0 +1,11 @@
+@import "./src/assets/styles/variables";
+
+.block-title {
+  h1 {
+    margin-right: $spacer;
+    margin-bottom: 0;
+  }
+
+  margin-bottom: $base-gap;
+}
+

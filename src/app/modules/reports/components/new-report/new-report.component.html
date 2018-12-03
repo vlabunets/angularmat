@@ -1,0 +1,30 @@
+<div class="app-block">
+  <div class="form-control">
+    <mat-date-input
+      [controlName]="'timeInput'"
+      [form]="form"
+      [fieldStyle]="'outline'"
+      [fieldMarker]="'primary'"
+      [hint]="'Фактическое время'"
+      [placeholder]="'00.00.00.00.0000'"></mat-date-input>
+  </div>
+</div>
+<div class="app-block">
+  <mat-alert-box
+    [type]="'info'"
+    [title]="'Инструкция'"
+    [text]="'Укажите информацию'"></mat-alert-box>
+</div>
+
+<div class="app-block">
+  <mat-alert-box
+    [type]="'success'"
+    [title]="'Комментарий'"
+    [text]="'Здесь отображается комментарий'">
+    <button mat-stroked-button color="primary">Все комментарии</button>
+  </mat-alert-box>
+</div>
+
+<div class="app-block">
+  <mat-transport-info></mat-transport-info>
+</div>

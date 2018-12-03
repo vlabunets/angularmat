@@ -1,0 +1,69 @@
+@import '~@angular/material/theming';
+
+// Base sizes
+$font-size: 16px;
+$base-font-size: 1rem;
+$base-gap: 0.9375rem !default;
+$spacer: $base-font-size !default;
+$content-gap: $base-gap*2;
+
+// Fonts
+$font-family-sans-serif: 'Lato', "Helvetica Neue", Arial, Noto Sans, sans-serif !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+$font-weight-base: 400 !default;
+$line-height-base: 1.5 !default;
+
+// Base indents
+$indents: (
+  xs: 5px,
+  sm: 10px,
+  md: 15px,
+  lg: 20px,
+  xl: 25px
+);
+
+// Color pallets
+// could be some custom color scheme
+$mat-semantic-colors: (
+  'action': rgb(0, 160, 230),
+  'action-light': rgb(230, 246, 253),
+  'action-hover': rgb(0, 144, 207),
+  'success': rgb(0, 210, 0),
+  'success-light': rgb(230, 251, 230),
+  'success-hover': rgb(0, 189, 0),
+  'danger': rgb(219, 0, 0),
+  'danger-light': rgb(248, 204, 204),
+  'danger-hover': rgb(197, 0, 0),
+  'warning': rgb(255, 136, 0),
+  'warning-light': rgb(255, 231, 204),
+  'warning-hover': rgb(229, 112, 0),
+  'focus-state': rgb(0, 0, 0),
+  'background-gray': rgb(230, 236, 236),
+  'text-color': rgb(70, 70, 70),
+  'white-color': rgb(255, 255, 255),
+  'black-color': rgb(0, 0, 0),
+);
+
+// Colors variables
+$mat-action: map-get($mat-orange, 500);
+$mat-action-light: map-get($mat-orange, 200);
+$mat-action-hover: map-get($mat-orange, 700);
+$mat-success: map-get($mat-semantic-colors, success);
+$mat-success-light: map-get($mat-semantic-colors, success-light);
+$mat-success-hover: map-get($mat-semantic-colors, success-hover);
+$mat-danger: map-get($mat-semantic-colors, danger);
+$mat-danger-light: map-get($mat-semantic-colors, danger-light);
+$mat-danger-hover: map-get($mat-semantic-colors, danger-hover);
+$mat-warning: map-get($mat-semantic-colors, warning);
+$mat-warning-light: map-get($mat-semantic-colors, warning-light);
+$mat-warning-hover: map-get($mat-semantic-colors, warning-hover);
+
+$mat-bg: map-get($mat-semantic-colors, background-gray);
+
+$mat-white: map-get($mat-semantic-colors, white-color);
+$mat-black: map-get($mat-semantic-colors, white-black);
+
+$mat-text-color: map-get($mat-semantic-colors, text-color);
+
+// and so on...

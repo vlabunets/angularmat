@@ -1,0 +1,25 @@
+.mat-expansion-panel {
+
+  &:not(.mat-expanded) {
+    & .mat-expansion-panel-header:not([aria-disabled='true']):hover {
+      background: map-get($mat-yellow, 600);
+    }
+  }
+
+  .mat-expansion-panel-header {
+    background-color: map-get($mat-yellow, 700);
+
+    &.mat-expanded:focus,
+    &.mat-expanded:hover {
+      background: map-get($mat-yellow, 600);
+    }
+  }
+}
+
+.mat-expansion-panel-content {
+  font-family: $font-family-sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+

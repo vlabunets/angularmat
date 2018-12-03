@@ -1,0 +1,40 @@
+.mat-form-field-wrap {
+  display: inline-flex;
+
+  &.fullwidth {
+    display: flex;
+
+    .mat-form-field {
+      flex: 1 1 auto;
+    }
+  }
+
+  &.inline {
+    display: flex;
+
+    .mat-form-field {
+      flex: 1 1 auto;
+    }
+  }
+}
+
+.field-marker {
+  flex: 0 1 $spacer;
+  display: block;
+  width: $spacer;
+  height: 45px; // need to make it dynamic
+  margin-right: $spacer;
+
+  &.high {
+    margin-top: 0.25em;
+    height: 59px; // need to make it dynamic
+  }
+
+  &.primary {
+    background-color: map-get($mat-orange, 500);
+  }
+
+  &.secondary {
+    background-color: map-get($mat-orange, 100);
+  }
+}

@@ -1,0 +1,15 @@
+// Custom font
+//@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+// UTILS
+@import "assets/styles/utils/mixins";
+@import "assets/styles/variables";
+
+// Custom Angular Material configuration.
+@import "assets/styles/vendor/angular-material/_angular-material.io";
+
+// Modules
+@import '~ngx-toastr/toastr.css';
+
+// Main styles
+@import "assets/styles/main";

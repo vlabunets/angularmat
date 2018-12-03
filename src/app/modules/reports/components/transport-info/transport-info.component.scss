@@ -1,0 +1,85 @@
+@import "./src/assets/styles/variables";
+@import "./src/assets/styles/helpers/forms";
+
+.trasport-info {
+  justify-content: space-between;
+
+  & .left {
+    flex: 1 1 auto;
+    max-width: 375px;
+    padding-top: $base-gap;
+  }
+
+  & .right {
+    flex: 1 1 auto;
+    max-width: 375px;
+    padding-top: $base-gap;
+  }
+
+  .mat-card {
+    background-color: map-get($mat-orange, 50);
+    margin-bottom: $base-gap;
+
+    .mat-card-title {
+      display: flex;
+      align-items: center;
+      color: $mat-text-color;
+      font-size: $base-font-size;
+      font-weight: normal;
+      margin-bottom: $base-gap;
+    }
+  }
+}
+
+.buttons-wrap {
+  display: flex;
+  justify-content: space-between;
+
+  & .left {
+    flex: 0 1 auto;
+  }
+
+  & .right {
+    flex: 0 1 300px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.left-panel-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h5 {
+    &:last-child {
+      font-weight: bold;
+    }
+  }
+}
+
+.container-info {
+  margin: $base-gap 0;
+
+  &__row {
+    display: flex;
+    align-items: center;
+  }
+
+  &__name {
+    flex: 0 1 45%;
+  }
+
+  &__value {
+    flex: 1 1 auto;
+
+    & .flex {
+      justify-content: space-between;
+      align-items: start;
+    }
+
+    button {
+      margin-top: 12px;
+    }
+  }
+}

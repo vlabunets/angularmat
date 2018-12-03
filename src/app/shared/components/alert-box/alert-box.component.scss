@@ -1,0 +1,41 @@
+@import "./src/assets/styles/variables";
+
+.alert-box {
+  position: relative;
+  border-radius: 5px;
+  padding: 1.5rem;
+  margin-bottom: $spacer;
+
+  &.alert-box-success {
+    background-color: map-get($mat-orange, 50);
+    color: $mat-text-color;
+
+    h3 {
+      color: map-get($mat-orange, 500);
+    }
+  }
+
+  &.alert-box-info {
+    background-color: map-get($mat-gray, 200);
+    color: $mat-text-color;
+  }
+
+  &.alert-box-warning {
+    background-color: map-get($mat-orange, 300);
+    color: $mat-text-color;
+  }
+
+  &.alert-box-error {
+    background-color: map-get($mat-red, 200);
+    color: $mat-text-color;
+  }
+
+  h3 {
+    margin-bottom: $spacer;
+  }
+
+  p {
+    font-weight: bold;
+    margin-bottom: $spacer;
+  }
+}

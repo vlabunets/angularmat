@@ -1,0 +1,37 @@
+@import "./src/assets/styles/variables";
+
+.mat-button,
+.mat-fab,
+.mat-icon-button,
+.mat-mini-fab,
+.mat-raised-button {
+  font-size: 0.8125rem;
+  font-weight: normal;
+  text-transform: uppercase;
+
+  &.dark {
+    color: $mat-white;
+    background-color: map-get($mat-grey, 700);
+  }
+}
+
+.mat-button,
+.mat-raised-button {
+  &.wide {
+    min-width: 180px;
+  }
+}
+
+.mat-flat-button.mat-primary,
+.mat-raised-button.mat-primary,
+.mat-fab.mat-primary,
+.mat-mini-fab.mat-primary {
+  color: $mat-white;
+}
+
+.mat-stroked-button:not([disabled]) {
+  border-color: $mat-action;
+  text-transform: uppercase;
+}
+
+

@@ -1,0 +1,21 @@
+:host {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+
+  @media only screen
+  and (min-device-width : 375px)
+  and (max-device-width : 812px)
+  and (-webkit-device-pixel-ratio : 3) {
+    bottom: auto;
+  }
+
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 667px)
+  and (orientation : landscape) {
+    bottom: auto;
+  }
+}

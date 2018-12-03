@@ -1,0 +1,117 @@
+<mat-accordion>
+  <mat-expansion-panel [expanded]="panelOpenState">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{panelTitle}}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="flex trasport-info">
+        <div class="left">
+          <div class="left-panel-title">
+            <h5>{{rtansporterTitle}}</h5>
+            <h5>{{rtansporterTitleName}}</h5>
+          </div>
+          <div class="form-control">
+            <mat-date-input
+              [controlName]="'dateInput'"
+              [form]="form"
+              [width]="'fullwidth'"
+              [fieldStyle]="'outline'"
+              [fieldMarker]="'primary'"
+              [hint]="'Плановая дата'"
+              [placeholder]="'00.00.00.000000'"></mat-date-input>
+          </div>
+          <div class="form-control">
+            <mat-input
+              [controlName]="'numberInput'"
+              [form]="form"
+              [width]="'fullwidth'"
+              [fieldStyle]="'outline'"
+              [fieldMarker]="'primary'"
+              [label]="'Номер'"
+              [hint]="'Номер'"
+              [placeholder]="'000000000000'"></mat-input>
+          </div>
+          <div class="form-control">
+            <mat-input
+              [controlName]="'amountInput'"
+              [form]="form"
+              [width]="'fullwidth'"
+              [fieldStyle]="'outline'"
+              [fieldMarker]="'secondary'"
+              [hint]="'Количество'"
+              [placeholder]="'000000000000'"></mat-input>
+          </div>
+        </div>
+        <div class="right">
+          <mat-card>
+            <mat-card-title>
+              <mat-icon>bookmark_border</mat-icon>
+              <span>{{containers_title}}</span>
+            </mat-card-title>
+            <mat-card-content>
+              <div class="container-info">
+                <div class="container-info__row">
+                  <div class="container-info__name">{{containers_number_title}}</div>
+                  <div class="container-info__value"><strong>{{containers_number_value}}</strong></div>
+                </div>
+              </div>
+              <div class="container-info">
+                <div class="container-info__row">
+                  <div class="container-info__name">{{containers_number_titleId}}</div>
+                  <div class="container-info__value">
+                    <div class="flex">
+                      <mat-input
+                        [controlName]="'containerId'"
+                        [form]="form"
+                        [width]="'inline'"
+                        [fieldStyle]="'outline'"
+                        [placeholder]="'0000000000'"></mat-input>
+                      <button type="button" mat-stroked-button color="primary" (click)="onAddContainerID()">+</button>
+                    </div>
+                  </div>
+                </div>
+                <div *ngIf="form.get('containerIDs').controls.length">
+                  <div class="container-info__row"
+                       formArrayName="containerIDs"
+                       *ngFor="let cId of form.get('containerIDs').controls; let i = index;">
+                    <div class="container-info__name"> new item</div>
+                    <div class="container-info__value">
+                      <div class="flex" [formGroupName]="i">
+                        <mat-input
+                          [controlName]="'name'"
+                          [form]="cId"
+                          [width]="'inline'"
+                          [fieldStyle]="'outline'"
+                          [placeholder]="''"></mat-input>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+      <div class="buttons-wrap">
+        <div class="left">
+          <button type="button" mat-raised-button class="dark">
+            <mat-icon matAffix aria-label="back">clear</mat-icon>
+            Отменить
+          </button>
+        </div>
+        <div class="right">
+          <button type="submit" mat-raised-button color="primary">
+            <mat-icon matAffix aria-label="back">save</mat-icon>
+            Сохранить
+          </button>
+          <button type="button" mat-raised-button color="warn">
+            <mat-icon matAffix aria-label="back">check</mat-icon>
+            Подвердить
+          </button>
+        </div>
+      </div>
+    </form>
+  </mat-expansion-panel>
+</mat-accordion>

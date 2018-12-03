@@ -1,0 +1,43 @@
+// Links mixin
+@mixin hover {
+  &:hover { @content; }
+}
+
+@mixin hover-focus {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin plain-hover-focus {
+  &,
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin hover-focus-active {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}
+
+// Placeholder for inputs
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}

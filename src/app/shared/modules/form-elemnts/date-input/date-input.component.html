@@ -1,0 +1,10 @@
+<div [formGroup]="form" *ngIf="form" class="mat-form-field-wrap" [ngClass]="[fieldWidth()]">
+  <span *ngIf="fieldMarker" class="field-marker" [ngClass]="[chooseStateClass(), fieldMarkerClass()]"></span>
+  <mat-form-field [appearance]="fieldStyle">
+    <mat-label *ngIf="label">{{label}}</mat-label>
+    <input matInput [matDatepicker]="picker" [placeholder]="placeholder" [value]="value" [formControlName]="controlName">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    <mat-hint *ngIf="hint">{{hint}}</mat-hint>
+  </mat-form-field>
+</div>

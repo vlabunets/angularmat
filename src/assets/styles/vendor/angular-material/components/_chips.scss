@@ -1,0 +1,16 @@
+.mat-chip {
+  &.mat-standard-chip.mat-chip-selected {
+
+    &.mat-primary {
+      color: map-get($mat-grey, 700);
+    }
+
+    &.mat-warn {
+      color: map-get($mat-grey, 700);
+    }
+
+    &.mat-accent {
+      color: map-get($mat-grey, 700);
+    }
+  }
+}

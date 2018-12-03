@@ -1,0 +1,8 @@
+<div [formGroup]="form" *ngIf="form" class="mat-form-field-wrap" [ngClass]="[fieldWidth()]">
+  <span *ngIf="fieldMarker" class="field-marker" [ngClass]="[chooseStateClass(), fieldMarkerClass()]"></span>
+  <mat-form-field [appearance]="fieldStyle">
+    <mat-label *ngIf="label">{{label}}</mat-label>
+    <input matInput [type]="type" [placeholder]="placeholder" [formControlName]="controlName">
+    <mat-hint *ngIf="hint">{{hint}}</mat-hint>
+  </mat-form-field>
+</div>
